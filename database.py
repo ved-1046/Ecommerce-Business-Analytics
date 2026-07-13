@@ -4,7 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from sqlalchemy import create_engine #creates the connection
 
-engine = create_engine("mysql+pymysql://root:vedika123%40321@localhost:3306/ecommerce_analysis")
+engine = create_engine("mysql+pymysql://root:password@localhost:3306/ecommerce_analysis")
 
 tables = {
      "customers": "olist_customers_dataset.csv",

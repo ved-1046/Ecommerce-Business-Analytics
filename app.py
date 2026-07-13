@@ -15,7 +15,7 @@ st.set_page_config(
 st.title('E-Commerce Sales Analytics Dashboard')
 st.markdown('### Business Intelligence Portal')
 
-engine = create_engine("mysql+pymysql://root:vedika123%40321@localhost:3306/ecommerce_analysis")
+engine = create_engine("mysql+pymysql://root:password@localhost:3306/ecommerce_analysis")
 #===========================================================================
 
 customers_df = pd.read_sql("""

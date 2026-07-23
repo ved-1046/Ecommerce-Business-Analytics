@@ -125,7 +125,7 @@ streamlit run app.py
 
 ## 👩‍💻Author
 
-**~ Vedika Tamshetti**
+**Vedika Tamshetti**
 
 
 ---

@@ -25,7 +25,7 @@ st.markdown('### Business Intelligence Portal')
 @st.cache_resource
 def get_engine():
     return create_engine(
-        "mysql+pymysql://root:vedika123%40321@localhost:3306/ecommerce_analysis"
+        "mysql+pymysql://root:YOUR_PASSWORD@localhost:3306/ecommerce_analysis"
 
     )
 

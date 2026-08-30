@@ -6,6 +6,12 @@ import pandas as pd
 from sqlalchemy import create_engine
 import matplotlib.pyplot as plt
 
+@st.cache_data
+def load_customer_Segments():
+    return pd.read_csv('customer_Segments.csv')
+
+customers_Segments_df = load_customer_Segments()
+
 st.set_page_config(
     page_title='Ecommerce Sales Analytics',
     layout = 'wide'
@@ -15,7 +21,16 @@ st.set_page_config(
 st.title('E-Commerce Sales Analytics Dashboard')
 st.markdown('### Business Intelligence Portal')
 
-engine = create_engine("mysql+pymysql://root:password@localhost:3306/ecommerce_analysis")
+
+@st.cache_resource
+def get_engine():
+    return create_engine(
+        "mysql+pymysql://root:vedika123%40321@localhost:3306/ecommerce_analysis"
+
+    )
+
+engine = get_engine()
+
 #===========================================================================
 
 customers_df = pd.read_sql("""
@@ -66,7 +81,7 @@ geo_revenue_df = pd.merge(
 #===========================================================================
 heatmap_data = geo_revenue_df[['geolocation_lat',
                                'geolocation_lng',
-                               'payment_value']].sample(5000)
+                               'payment_value']].sample(500)
 
 heatmap_data = heatmap_data.values.tolist()
 
@@ -89,7 +104,16 @@ from customers
 order by customer_state
 """
 
-states = pd.read_sql(query ,engine)
+@st.cache_data
+def get_states(_engine):
+    query = '''
+SELECT DISTINCT customer_state
+from customers
+order by customer_state
+'''
+    return pd.read_sql(query,_engine)
+
+states = get_states(engine)
 
 state_list = ['All'] + states['customer_state'].tolist() #toist converts pandas series into python list
 
@@ -106,7 +130,7 @@ if selected_State == 'All':
     """
 else:
     query = f"""
-    select count(*) as total_custoemrs
+    select count(*) as total_customers
     from customers
     where customer_state = '{selected_State}';
     """
@@ -410,3 +434,17 @@ st_folium(
     width=1000,
     height=600
 )
+<<<<<<< HEAD
+=======
+
+st.markdown("----")
+st.header("🤖 Customer Intelligence")
+st.subheader('Customer Segmentation')
+
+segment_counts = (
+    customer_Segments_df['Segment'].value_counts().reset_index()
+)
+
+segment_counts.columns = ['Segment','Customers']
+st.dataframe(segment_counts, use_container_width=True)
+>>>>>>> 4af402c (Add customer segmentation ML)

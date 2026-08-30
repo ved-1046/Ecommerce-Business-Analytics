@@ -1,41 +1,65 @@
-# 🛒 E-Commerce Business Analytics
+# 🛒 E-Commerce Business Analytics & Customer Segmentation
 
-An end-to-end Business Analytics project developed using **Python, SQL, MySQL, Pandas, Streamlit, and Folium** to transform raw e-commerce data into actionable business insights through interactive visualizations and analytics.
+An end-to-end **Business Analytics and Machine Learning project** developed using **Python, SQL, MySQL, Pandas, Streamlit, Scikit-learn, and Folium** to transform raw e-commerce data into actionable business insights and customer segments.
 
 ---
 
 ## 📌 Project Overview
 
-This project analyzes a real-world e-commerce dataset to uncover meaningful business insights related to customer behavior, sales performance, payment methods, product categories, and geographical revenue distribution.
+This project analyzes a real-world e-commerce dataset to uncover meaningful insights related to **sales performance, customer behavior, payment methods, product categories, and geographical revenue distribution**.
 
-The application enables users to explore business metrics through an interactive interface with dynamic filtering and visual analytics.
+The project also uses **RFM analysis and K-Means clustering** to segment customers based on their purchasing behavior.
 
 ---
 
 ## 🎯 Business Problems Solved
 
-This project answers important business questions such as:
-
 - Which states generate the highest revenue?
 - How does revenue change over time?
-- Which payment methods are most preferred by customers?
+- Which payment methods are most preferred?
 - Which cities contribute the most revenue?
 - Which product categories generate the highest sales?
-- How is revenue distributed geographically across Brazil?
+- How is revenue distributed geographically?
+- What different types of customers exist based on their purchasing behavior?
 
 ---
 
-##  Project Features
+## 🚀 Project Features
 
--  Interactive KPI Cards
--  Monthly Revenue Trend Analysis
--  Revenue by State Analysis
--  Payment Method Distribution
--  Top 10 Revenue-Generating Cities
--  Top Product Categories by Revenue
--  Geographic Revenue Heatmap
--  Dynamic State-Based Filtering
--  Interactive Streamlit Application
+- Interactive KPI Cards
+- Monthly Revenue Trend Analysis
+- Revenue by State Analysis
+- Payment Method Distribution
+- Top 10 Revenue-Generating Cities
+- Top Product Categories by Revenue
+- Geographic Revenue Heatmap
+- Dynamic State-Based Filtering
+- Interactive Streamlit Dashboard
+- RFM Customer Analysis
+- K-Means Customer Segmentation
+
+---
+
+## 🤖 Machine Learning
+
+Customer segmentation is performed using **RFM (Recency, Frequency, Monetary)** analysis.
+
+### ML Pipeline
+
+- RFM Feature Engineering
+- Data Distribution Analysis
+- Log Transformation
+- Feature Scaling using StandardScaler
+- K-Means Clustering
+- Elbow Method
+- Silhouette Score
+
+The final model uses **4 customer segments**:
+
+- **High-Value Repeat**
+- **Recent Customers**
+- **High-Value Inactive**
+- **Low-Value Inactive**
 
 ---
 
@@ -45,6 +69,8 @@ This project answers important business questions such as:
 - SQL
 - MySQL
 - Pandas
+- NumPy
+- Scikit-learn
 - SQLAlchemy
 - PyMySQL
 - Streamlit
@@ -60,14 +86,16 @@ This project answers important business questions such as:
 - Joins
 - Aggregate Functions
 - GROUP BY & HAVING
-- Sorting & Filtering
+- Filtering & Sorting
 - Business Query Writing
 
-### Python
-- Data Analysis using Pandas
+### Python & ML
 - Data Cleaning
 - Data Merging
-- SQL Integration
+- RFM Analysis
+- Feature Engineering
+- K-Means Clustering
+- Model Evaluation
 
 ### Business Analytics
 - KPI Development
@@ -77,11 +105,6 @@ This project answers important business questions such as:
 - Payment Analysis
 - Geospatial Analysis
 
-### Data Visualization
-- Matplotlib
-- Folium Interactive Maps
-- Streamlit
-
 ---
 
 ## 📈 Key Insights
@@ -90,43 +113,32 @@ This project answers important business questions such as:
 - Analyzed monthly revenue trends.
 - Compared payment method preferences.
 - Identified top-performing product categories.
-- Visualized revenue distribution geographically using an interactive heatmap.
+- Found distinct customer groups based on purchasing behavior.
+- Identified a small group of repeat, high-value customers.
 
 ---
-
 
 ## ▶️ Getting Started
 
 ### Clone the repository
 
-```bash
-git clone https://github.com/yourusername/ecommerce-business-analytics.git
-```
+git clone https://github.com/ved-1046/Ecommerce-Business-Analytics.git
 
 ### Navigate to the project
 
-```bash
-cd ecommerce-business-analytics
-```
+cd Ecommerce-Business-Analytics
 
 ### Install dependencies
 
-```bash
 pip install -r requirements.txt
-```
 
 ### Run the application
 
-```bash
 streamlit run app.py
-```
 
 ---
 
-## 👩‍💻Author
+## 👩‍💻 Author
 
 **Vedika Tamshetti**
-
-
----
 

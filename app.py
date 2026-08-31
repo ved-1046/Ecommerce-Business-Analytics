@@ -25,7 +25,11 @@ st.markdown('### Business Intelligence Portal')
 @st.cache_resource
 def get_engine():
     return create_engine(
+<<<<<<< HEAD
         "mysql+pymysql://root:YOUR_PASSWORD@localhost:3306/ecommerce_analysis"
+=======
+        "mysql+pymysql://root:YOURpassword@localhost:3306/ecommerce_analysis"
+>>>>>>> d358c5e (Update dashboard and ML integration)
 
     )
 

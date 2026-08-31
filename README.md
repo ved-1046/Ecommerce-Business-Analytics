@@ -1,50 +1,44 @@
-# 🛒 E-Commerce Business Analytics & Customer Segmentation
+# 🛒 E-Commerce Business Analytics & Customer Intelligence
 
-An end-to-end **Business Analytics and Machine Learning project** developed using **Python, SQL, MySQL, Pandas, Streamlit, Scikit-learn, and Folium** to transform raw e-commerce data into actionable business insights and customer segments.
-
----
+An end-to-end **Business Analytics and Machine Learning project** built using **Python, SQL, MySQL, Pandas, Streamlit, Scikit-learn, and Folium** to analyze e-commerce data, uncover business insights, and understand customer behavior.
 
 ## 📌 Project Overview
 
-This project analyzes a real-world e-commerce dataset to uncover meaningful insights related to **sales performance, customer behavior, payment methods, product categories, and geographical revenue distribution**.
+This project analyzes a real-world e-commerce dataset to understand **sales performance, customer behavior, payment methods, product categories, and geographical revenue distribution**.
 
-The project also uses **RFM analysis and K-Means clustering** to segment customers based on their purchasing behavior.
-
----
+The project also applies **RFM analysis, K-Means clustering, and repeat purchase prediction** to extract deeper customer-level insights.
 
 ## 🎯 Business Problems Solved
 
-- Which states generate the highest revenue?
+- Which states and cities generate the highest revenue?
 - How does revenue change over time?
 - Which payment methods are most preferred?
-- Which cities contribute the most revenue?
-- Which product categories generate the highest sales?
+- Which product categories perform best?
 - How is revenue distributed geographically?
-- What different types of customers exist based on their purchasing behavior?
-
----
+- What different customer segments exist based on purchasing behavior?
+- Can customer purchasing behavior be used to predict repeat purchases?
 
 ## 🚀 Project Features
 
-- Interactive KPI Cards
-- Monthly Revenue Trend Analysis
-- Revenue by State Analysis
+- Interactive KPI Dashboard
+- Monthly Revenue Trend
+- Revenue by State
 - Payment Method Distribution
 - Top 10 Revenue-Generating Cities
-- Top Product Categories by Revenue
+- Top Product Categories
 - Geographic Revenue Heatmap
-- Dynamic State-Based Filtering
-- Interactive Streamlit Dashboard
+- Dynamic State Filtering
 - RFM Customer Analysis
 - K-Means Customer Segmentation
-
----
+- Repeat Purchase Prediction Experiments
 
 ## 🤖 Machine Learning
 
-Customer segmentation is performed using **RFM (Recency, Frequency, Monetary)** analysis.
+### Customer Segmentation
 
-### ML Pipeline
+Customers are analyzed using **RFM (Recency, Frequency, Monetary)** features.
+
+**ML Pipeline:**
 
 - RFM Feature Engineering
 - Data Distribution Analysis
@@ -54,14 +48,42 @@ Customer segmentation is performed using **RFM (Recency, Frequency, Monetary)** 
 - Elbow Method
 - Silhouette Score
 
-The final model uses **4 customer segments**:
+The final segmentation identifies four customer groups:
 
 - **High-Value Repeat**
 - **Recent Customers**
 - **High-Value Inactive**
 - **Low-Value Inactive**
 
----
+### Repeat Purchase Prediction
+
+A supervised ML experiment was also developed to predict whether a customer would purchase again.
+
+**Features explored:**
+
+- Recency
+- Frequency
+- Monetary
+- Average Order Value
+- Customer Lifetime
+- Average Payment per Order
+
+**Models evaluated:**
+
+- Logistic Regression
+- Random Forest
+- XGBoost
+- XGBoost with class-imbalance handling
+
+Model performance was evaluated using:
+
+- Accuracy
+- Precision
+- Recall
+- F1 Score
+- Confusion Matrix
+
+The analysis highlighted the challenges of predicting repeat purchases due to the **highly imbalanced target variable**.
 
 ## 🛠 Tech Stack
 
@@ -71,6 +93,7 @@ The final model uses **4 customer segments**:
 - Pandas
 - NumPy
 - Scikit-learn
+- XGBoost
 - SQLAlchemy
 - PyMySQL
 - Streamlit
@@ -78,24 +101,26 @@ The final model uses **4 customer segments**:
 - Folium
 - Streamlit-Folium
 
----
-
 ## 📚 Skills Demonstrated
 
 ### SQL
 - Joins
 - Aggregate Functions
-- GROUP BY & HAVING
+- GROUP BY
 - Filtering & Sorting
 - Business Query Writing
 
-### Python & ML
+### Python & Machine Learning
 - Data Cleaning
 - Data Merging
 - RFM Analysis
 - Feature Engineering
+- Log Transformation
+- Feature Scaling
 - K-Means Clustering
+- Classification
 - Model Evaluation
+- Handling Class Imbalance
 
 ### Business Analytics
 - KPI Development
@@ -105,40 +130,29 @@ The final model uses **4 customer segments**:
 - Payment Analysis
 - Geospatial Analysis
 
----
-
 ## 📈 Key Insights
 
 - Identified high-revenue states and cities.
 - Analyzed monthly revenue trends.
-- Compared payment method preferences.
+- Compared customer payment preferences.
 - Identified top-performing product categories.
-- Found distinct customer groups based on purchasing behavior.
-- Identified a small group of repeat, high-value customers.
-
----
+- Segmented customers based on purchasing behavior.
+- Identified high-value and repeat customer groups.
+- Evaluated the challenges of repeat-purchase prediction in a highly imbalanced dataset.
 
 ## ▶️ Getting Started
 
-### Clone the repository
+### Clone the Repository
 
+```bash
 git clone https://github.com/ved-1046/Ecommerce-Business-Analytics.git
-
-### Navigate to the project
-
 cd Ecommerce-Business-Analytics
-
-### Install dependencies
-
 pip install -r requirements.txt
-
-### Run the application
-
 streamlit run app.py
 
----
+👩‍💻 Author
+Vedika Tamshetti
+```
 
-## 👩‍💻 Author
 
-**Vedika Tamshetti**
 
